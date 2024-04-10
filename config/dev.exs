@@ -23,7 +23,7 @@ config :workflow_test, WorkflowTestWeb.Endpoint,
   check_origin: false,
   code_reloader: true,
   debug_errors: true,
-  secret_key_base: "pU1W98HeOhk29H23XIAvwxgwN2m+SK94Vbl7AcYNN+17MYtzfiETMUuQm7o8dZvE",
+  secret_key_base: "pU1W98HeOhk29H23XIAvwxgwN2m+SK94Vbl7AcYNN+17MYtzfiETMUuQm7o8dZve",
   watchers: [
     esbuild: {Esbuild, :install_and_run, [:workflow_test, ~w(--sourcemap=inline --watch)]},
     tailwind: {Tailwind, :install_and_run, [:workflow_test, ~w(--watch)]}
