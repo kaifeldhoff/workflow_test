@@ -1,8 +1,12 @@
 name: Elixir CI
 
+#on:
+#  push:
+#    branches: [ "main" ]
+
 on:
-  push:
-    branches: [ "main" ]
+  pull_request_review:
+    types: [submitted]
 
 env:
   MIX_ENV: test
@@ -12,6 +16,7 @@ permissions:
 
 jobs:
   test:
+    if: github.event.review.state == 'APPROVED'
 
     services:
       db:
